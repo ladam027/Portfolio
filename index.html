@@ -65,6 +65,7 @@ footer{padding:40px 0 64px;color:var(--muted);font-size:.92rem}
     <nav class="jump" aria-label="Projects">
       <a href="#quickloop">Quickloop</a>
       <a href="#sleeper">Sleeper Agent</a>
+      <a href="#letterfour">Letter Four</a>
     </nav>
   </div>
 </header>
@@ -161,6 +162,37 @@ footer{padding:40px 0 64px;color:var(--muted);font-size:.92rem}
       </figure>
     </div>
     <p class="note">The Sleeper Agent screenshots show sample data I made for these images. The businesses, amounts and contacts in them are not real.</p>
+  </div>
+</section>
+<section class="project" id="letterfour">
+  <div class="wrap">
+    <p class="kicker">Project 3 · Part-time admin role, Letter Four</p>
+    <h2>Letter Four operations</h2>
+    <div class="intro">
+      <div>
+        <p>Letter Four is an architecture and interior design firm where I work part-time in admin. I automated how website inquiries reach the team and organized the firm's procedures into one searchable library in Notion.</p>
+      </div>
+      <dl class="facts">
+        <div><dt>Role</dt><dd>Part-time admin</dd></div>
+        <div><dt>Tools</dt><dd>Zapier, Webflow, Notion, Gmail, JavaScript</dd></div>
+      </dl>
+    </div>
+
+    <figure>
+      <img src="images/lf-form-router.webp" alt="Zapier workflow: one webhook splits into four paths for Contact Us, Cost Calculator, Ads Calculator and Interior Design Packages forms; each path sends a Gmail email and creates a Notion entry, some with filters and a JavaScript step." loading="lazy">
+      <figcaption><b>Website form router (live).</b> One webhook receives every form on the firm's Webflow site and splits them into four paths: Contact Us, Cost Calculator, Ads Calculator and Interior Design Packages. Each path emails the right person and creates an entry in a Notion database. The Contact Us and Interior Design paths also filter submissions and run a JavaScript step that formats the details onto the Notion page.</figcaption>
+    </figure>
+    <div class="grid2">
+      <figure>
+        <img src="images/lf-sop-library.webp" alt="Notion SOP Library database with views by category, priority, under review and approved, listing HR procedures numbered 1101 to 1301." loading="lazy">
+        <figcaption><b>SOP library.</b> Every procedure in one Notion database, tracked by approval status, priority and type, with saved views for what's under review, approved or recently updated.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/lf-sop-categories.webp" alt="Notion SOP Library rows for Marketing (6000s) and Operations and Admin (7000s), colour-coded by category." loading="lazy">
+        <figcaption><b>Numbered by department.</b> Procedures are numbered by area (1000s Human Resources, 6000s Marketing, 7000s Operations and Admin), so related ones sit together and each can be found by its number.</figcaption>
+      </figure>
+    </div>
+    <p class="note">Some information in these screenshots is omitted or censored for company security.</p>
   </div>
 </section>
 </main>
