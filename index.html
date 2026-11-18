@@ -17,7 +17,7 @@
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,sans-serif}
 a{color:var(--accent)}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1440px;margin:0 auto;padding:0 24px}
 header.top{padding:72px 0 40px;border-bottom:1px solid var(--line)}
 h1{font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.05;letter-spacing:-.02em;margin:0 0 16px}
 .lede{max-width:var(--measure);color:var(--muted);font-size:1.15rem;margin:0 0 20px}
@@ -37,10 +37,11 @@ dl.facts dd{margin:0}
 ul.points{padding-left:1.1em;max-width:var(--measure);margin:8px 0 0}
 ul.points li{margin:6px 0}
 figure{margin:32px 0 0}
+figure a{display:block;cursor:zoom-in}
 figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
 figcaption{font-size:.92rem;color:var(--muted);margin-top:10px;max-width:var(--measure)}
 figcaption b{color:var(--ink);font-weight:600}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.grid2{display:block}
 .grid2 figure{margin-top:28px}
 .note{font-size:.92rem;color:var(--muted);border-left:3px solid var(--line);padding-left:14px;margin:28px 0 0;max-width:var(--measure)}
 footer{padding:40px 0 64px;color:var(--muted);font-size:.92rem}
@@ -89,26 +90,26 @@ footer{padding:40px 0 64px;color:var(--muted);font-size:.92rem}
     </div>
 
     <figure>
-      <img src="images/ql-website.webp" alt="Quickloop homepage: headline 'Every lead answered in under a minute' beside a timeline showing a contact form, an instant reply email, and follow-up reminders." loading="lazy">
+      <a href="images/ql-website.webp" target="_blank" rel="noopener"><img src="images/ql-website.webp" alt="Quickloop homepage: headline 'Every lead answered in under a minute' beside a timeline showing a contact form, an instant reply email, and follow-up reminders." loading="lazy"></a>
       <figcaption><b>The website.</b> Visitors can try the instant reply themselves: they fill in the form and get an email from the system within seconds.</figcaption>
     </figure>
 
     <h3>Automations</h3>
     <figure>
-      <img src="images/ql-site-form.webp" alt="n8n workflow: website form, spam check, rate limit using a data table, reply email from Gmail, owner alert, and a daily cleanup job." loading="lazy">
+      <a href="images/ql-site-form.webp" target="_blank" rel="noopener"><img src="images/ql-site-form.webp" alt="n8n workflow: website form, spam check, rate limit using a data table, reply email from Gmail, owner alert, and a daily cleanup job." loading="lazy"></a>
       <figcaption><b>Site form intake (live).</b> The form posts to a webhook. The workflow filters spam, applies a per-hour rate limit stored in a data table, sends the visitor a reply through the Gmail API, and alerts me. A daily job deletes old rate-limit rows.</figcaption>
     </figure>
     <figure>
-      <img src="images/ql-cold-email.webp" alt="n8n workflow in three groups: read the lead from Notion, scan their site and check domain email records, then Claude writes the draft and it is saved to Notion." loading="lazy">
+      <a href="images/ql-cold-email.webp" target="_blank" rel="noopener"><img src="images/ql-cold-email.webp" alt="n8n workflow in three groups: read the lead from Notion, scan their site and check domain email records, then Claude writes the draft and it is saved to Notion." loading="lazy"></a>
       <figcaption><b>AI cold-email drafter (live).</b> A button in Notion starts it. It reads the lead, fetches their homepage and contact page, checks the domain's MX records, then asks Claude for a short first email built on one real fact from the site. The draft and a 4-step follow-up sequence are saved under the lead, and nothing is sent automatically.</figcaption>
     </figure>
     <div class="grid2">
       <figure>
-        <img src="images/ql-call-script.webp" alt="n8n workflow: Notion button, read the lead, fetch homepage, build Claude request, format and save a script page." loading="lazy">
+        <a href="images/ql-call-script.webp" target="_blank" rel="noopener"><img src="images/ql-call-script.webp" alt="n8n workflow: Notion button, read the lead, fetch homepage, build Claude request, format and save a script page." loading="lazy"></a>
         <figcaption><b>AI call-script builder (live).</b> The same Notion-to-Claude pattern, returning structured output: an opener, discovery questions, answers to objections, a close and a voicemail.</figcaption>
       </figure>
       <figure>
-        <img src="images/ql-proposal-sender.webp" alt="n8n workflow: proposal form, copy a Google Docs template, fill it in, save as PDF, email the client, log the proposal in Sheets." loading="lazy">
+        <a href="images/ql-proposal-sender.webp" target="_blank" rel="noopener"><img src="images/ql-proposal-sender.webp" alt="n8n workflow: proposal form, copy a Google Docs template, fill it in, save as PDF, email the client, log the proposal in Sheets." loading="lazy"></a>
         <figcaption><b>Proposal sender (client template).</b> After an estimate visit, a form fills a Google Docs template, exports a PDF, emails it to the client and logs it in Sheets. A companion workflow watches for the client's reply of "I agree".</figcaption>
       </figure>
     </div>
@@ -140,29 +141,29 @@ footer{padding:40px 0 64px;color:var(--muted);font-size:.92rem}
     </ul>
 
     <figure>
-      <img src="images/sa-overview.webp" alt="Sleeper Agent overview: current task, spend against daily cap, pending approval card, agent budgets with kill buttons, and a chat panel." loading="lazy">
+      <a href="images/sa-overview.webp" target="_blank" rel="noopener"><img src="images/sa-overview.webp" alt="Sleeper Agent overview: current task, spend against daily cap, pending approval card, agent budgets with kill buttons, and a chat panel." loading="lazy"></a>
       <figcaption><b>Overview.</b> The current task, spend against the daily cap, a pending approval, per-agent budgets and controls, and chat with the orchestrator.</figcaption>
     </figure>
     <div class="grid2">
       <figure>
-        <img src="images/sa-memory.webp" alt="Sleeper Agent memory page showing a graph of stored facts." loading="lazy">
+        <a href="images/sa-memory.webp" target="_blank" rel="noopener"><img src="images/sa-memory.webp" alt="Sleeper Agent memory page showing a graph of stored facts." loading="lazy"></a>
         <figcaption><b>Memory.</b> Long-term memory stored as a graph in SQLite, with pinned core facts.</figcaption>
       </figure>
       <figure>
-        <img src="images/sa-money.webp" alt="Sleeper Agent money page with projects, income and a ledger." loading="lazy">
+        <a href="images/sa-money.webp" target="_blank" rel="noopener"><img src="images/sa-money.webp" alt="Sleeper Agent money page with projects, income and a ledger." loading="lazy"></a>
         <figcaption><b>Money.</b> Income against AI spend for each project, plus an "income engine" that finds local businesses with no website each day, has an agent build a demo site, and drafts a pitch that waits for my approval.</figcaption>
       </figure>
       <figure>
-        <img src="images/sa-statistics.webp" alt="Sleeper Agent statistics page with usage and cost charts." loading="lazy">
+        <a href="images/sa-statistics.webp" target="_blank" rel="noopener"><img src="images/sa-statistics.webp" alt="Sleeper Agent statistics page with usage and cost charts." loading="lazy"></a>
         <figcaption><b>Statistics.</b> Every task with the agent that ran it, its steps, tokens, cost and time, plus suggestions for spending less, worked out from actual usage.</figcaption>
       </figure>
       <figure>
-        <img src="images/sa-clients.webp" alt="Sleeper Agent clients page, an outreach CRM." loading="lazy">
+        <a href="images/sa-clients.webp" target="_blank" rel="noopener"><img src="images/sa-clients.webp" alt="Sleeper Agent clients page, an outreach CRM." loading="lazy"></a>
         <figcaption><b>Clients.</b> An outreach CRM where agents draft emails that I approve before anything is sent.</figcaption>
       </figure>
     </div>
     <figure>
-      <img src="images/sa-costs.webp" alt="Sleeper Agent cost breakdown: savings suggestions, spend by type, daily spend by agent chart, and a table of calls, spend, cost per call and cache hit rate for each agent." loading="lazy">
+      <a href="images/sa-costs.webp" target="_blank" rel="noopener"><img src="images/sa-costs.webp" alt="Sleeper Agent cost breakdown: savings suggestions, spend by type, daily spend by agent chart, and a table of calls, spend, cost per call and cache hit rate for each agent." loading="lazy"></a>
       <figcaption><b>Cost breakdown.</b> Where each dollar goes (prompt caching, input, output, web searches, phone calls), daily spend by agent, and each agent's model, calls, cost per call and cache hit rate. The dashboard also suggests ways to spend less, worked out from actual usage.</figcaption>
     </figure>
     <p class="note">The Sleeper Agent screenshots show sample data I made for these images. The businesses, amounts and contacts in them are not real.</p>
@@ -183,16 +184,16 @@ footer{padding:40px 0 64px;color:var(--muted);font-size:.92rem}
     </div>
 
     <figure>
-      <img src="images/lf-form-router.webp" alt="Zapier workflow: one webhook splits into four paths for Contact Us, Cost Calculator, Ads Calculator and Interior Design Packages forms; each path sends a Gmail email and creates a Notion entry, some with filters and a JavaScript step." loading="lazy">
+      <a href="images/lf-form-router.webp" target="_blank" rel="noopener"><img src="images/lf-form-router.webp" alt="Zapier workflow: one webhook splits into four paths for Contact Us, Cost Calculator, Ads Calculator and Interior Design Packages forms; each path sends a Gmail email and creates a Notion entry, some with filters and a JavaScript step." loading="lazy"></a>
       <figcaption><b>Website form router (live).</b> One webhook receives every form on the firm's Webflow site and splits them into four paths: Contact Us, Cost Calculator, Ads Calculator and Interior Design Packages. Each path emails the right person and creates an entry in a Notion database. The Contact Us and Interior Design paths also filter submissions and run a JavaScript step that formats the details onto the Notion page.</figcaption>
     </figure>
     <div class="grid2">
       <figure>
-        <img src="images/lf-sop-library.webp" alt="Notion SOP Library database with views by category, priority, under review and approved, listing HR procedures numbered 1101 to 1301." loading="lazy">
+        <a href="images/lf-sop-library.webp" target="_blank" rel="noopener"><img src="images/lf-sop-library.webp" alt="Notion SOP Library database with views by category, priority, under review and approved, listing HR procedures numbered 1101 to 1301." loading="lazy"></a>
         <figcaption><b>SOP library.</b> Every procedure in one Notion database, tracked by approval status, priority and type, with saved views for what's under review, approved or recently updated.</figcaption>
       </figure>
       <figure>
-        <img src="images/lf-sop-categories.webp" alt="Notion SOP Library rows for Marketing (6000s) and Operations and Admin (7000s), colour-coded by category." loading="lazy">
+        <a href="images/lf-sop-categories.webp" target="_blank" rel="noopener"><img src="images/lf-sop-categories.webp" alt="Notion SOP Library rows for Marketing (6000s) and Operations and Admin (7000s), colour-coded by category." loading="lazy"></a>
         <figcaption><b>Numbered by department.</b> Procedures are numbered by area (1000s Human Resources, 6000s Marketing, 7000s Operations and Admin), so related ones sit together and each can be found by its number.</figcaption>
       </figure>
     </div>
